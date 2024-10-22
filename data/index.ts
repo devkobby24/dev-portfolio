@@ -75,7 +75,7 @@ export const navItems = [
       title: "AI Trip Planner",
       des: "🌍 Your Ultimate Travel Companion, the smartest way to plan your dream vacations!",
       img: "/tripplanner.png",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/firebase.svg", "/fm.svg"],
+      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/firebase.svg", "/c.svg"],
       link: "web-ai-tripplanner.vercel.app",
     },
     {
@@ -90,7 +90,7 @@ export const navItems = [
       id: 3,
       title: "PlugPoint EV Charging Station Tracker",
       des: "The EV Charging Station Tracker is your ultimate companion on the road, designed for electric vehicle owners who want to effortlessly locate nearby charging stations.",
-      img: "/p3.svg",
+      img: "/mini-project.jpg",
       iconLists: ["/re.svg", "/css-icon.svg", "/js.svg", "/firebase.svg", "/c.svg"],
       link: "https://github.com/devkobby24/mini-project",
     },
@@ -99,7 +99,7 @@ export const navItems = [
       title: "FindDevJob",
       des: "FindDevJob is a mobile application built with React Native and Expo that allows users to search for developer jobs across various industries and locations.",
       img: "/p4.svg",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+      iconLists: ["/re.svg", "/css-icon.svg", "/js.svg",],
       link: "https://github.com/devkobby24/JobFinderApp",
     },
     {
