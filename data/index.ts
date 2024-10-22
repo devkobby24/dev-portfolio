@@ -75,8 +75,8 @@ export const navItems = [
       title: "AI Trip Planner",
       des: "🌍 Your Ultimate Travel Companion, the smartest way to plan your dream vacations!",
       img: "/tripplanner.png",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/firebase.svg", "/c.svg", "/vite.svg"],
-      link: "web-ai-tripplanner.vercel.app",
+      iconLists: ["/re.svg", "/tail.svg", "/js.svg", "/firebase.svg", "/c.svg", "/vite.svg"],
+      link: "https://web-ai-tripplanner.vercel.app",
     },
     {
       id: 2,
@@ -84,14 +84,14 @@ export const navItems = [
       des: "An issue tracker built with Next.js that allows users to create, manage, and track issues for projects.",
       img: "/issue-tracker.png",
       iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/firebase.svg", "/c.svg"],
-      link: "web-issue-tracker.vercel.app",
+      link: "https://web-issue-tracker.vercel.app",
     },
     {
       id: 3,
       title: "PlugPoint EV Charging Station Tracker",
       des: "The EV Charging Station Tracker is your ultimate companion on the road, designed for electric vehicle owners who want to effortlessly locate nearby charging stations.",
       img: "/mini-project.jpg",
-      iconLists: ["/re.svg", "/css-icon.svg", "/js.svg", "/firebase.svg", "/c.svg", "/google-maps.svg"],
+      iconLists: ["/re.svg", "/expo.svg", "/js.svg", "/firebase.svg", "/c.svg", "/google-maps.svg"],
       link: "https://github.com/devkobby24/mini-project",
     },
     {
@@ -99,16 +99,24 @@ export const navItems = [
       title: "FindDevJob",
       des: "FindDevJob is a mobile application built with React Native and Expo that allows users to search for developer jobs across various industries and locations.",
       img: "/jobsearch.png",
-      iconLists: ["/re.svg", "/css-icon.svg", "/js.svg", "/api.svg",],
+      iconLists: ["/re.svg", "/css-icon.svg", "/js.svg", "/api.svg", "/expo.svg"],
       link: "https://github.com/devkobby24/JobFinderApp",
     },
     {
       id: 5,
       title: "Password Generator",
-      des: "FA simple webpage that generates random passwords using HTML, CSS, and JavaScript. Users can click the Generate button to create a random password instantly.",
+      des: "A simple webpage that generates random passwords using HTML, CSS, and JavaScript. Users can click the Generate button to create a random password instantly.",
       img: "/passwordgen.png",
       iconLists: ["/html-icon.svg", "/js.svg", "/css-icon.svg",],
       link: "https://passphrasegenerator.netlify.app/",
+    },
+    {
+      id: 6,
+      title: "Non Profit Foundation Website",
+      des: "Welcome to the official website of Therestella Foundation, a nonprofit organization dedicated to empowering underprivileged communities through education and sustainable development initiatives.",
+      img: "/therestella.png",
+      iconLists: ["/html-icon.svg", "/js.svg", "/css-icon.svg", "/php.svg", "/scss.svg"],
+      link: "https://therestellafoundation.netlify.app",
     }
   ];
   
