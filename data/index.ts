@@ -123,33 +123,38 @@ export const navItems = [
   export const testimonials = [
     {
       quote:
-        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+        "Justice is one of the most reliable developers I have worked with. Their ability to handle complex tasks like integrating Firebase with a Next.js app while maintaining clean, efficient code is impressive. They also have a great sense of UI/UX design!.",
       name: "Peter Essibu",
       title: "Student at University of Cape Coast",
+      img: "/peter.jpg",
     },
     {
       quote:
-        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+        "Justice took charge of our AI trip planner's front-end and made it intuitive and user-friendly. Their skill in working with Google APIs and React is outstanding. The charging station tracker feature they implemented is a game changer for our users!.",
       name: "Samuel Affum",
       title: "Student at KNUST",
+      img: "/sammy.jpg",
     },
     {
       quote:
-        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+        "I've been consistently impressed by Justice' ability to manage complex tasks like issue tracking, Firestore integration, and authentication workflows in our app. They handle everything with a calm demeanor and always deliver high-quality code.",
       name: "Ignatus Forkuo",
       title: "Student at KNUST",
+      img: "/sammy.jpg",
     },
     {
       quote:
-        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+        "Justice is a brilliant developer who helped us build an issue tracker dashboard with React and Prisma. Their understanding of databases and efficient query handling with MySQL was a great asset to our team.",
       name: "Francis Adjei",
       title: "Software Developer at Brolly",
+      img: "/sammy.jpg",
     },
     {
       quote:
         "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
       name: "Godwin Opoku Duah",
       title: "C.T.O at Brolly",
+      img: "/kobby.jpg",
     },
   ];
   
