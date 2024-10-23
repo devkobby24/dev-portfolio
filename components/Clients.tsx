@@ -16,7 +16,7 @@ const Clients = () => {
           speed="slow"
         />
 
-        <div className="flex flex-wrap items-center justify-center gap-4 max-lg:mt-10 md:gap-16">
+        {/* <div className="flex flex-wrap items-center justify-center gap-4 max-lg:mt-10 md:gap-16">
           {companies.map(({ id, name, img, nameImg }) => (
             <div key={id} className="flex md:max-w-60 max-w-32 gap-2">
               <img src={img} alt={name} className="w-20 md:w-24" />
@@ -24,7 +24,7 @@ const Clients = () => {
               <img src={nameImg} alt={name} className="w-20 md:w-24" />
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );
