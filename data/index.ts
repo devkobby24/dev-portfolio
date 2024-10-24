@@ -1,3 +1,4 @@
+
 export const navItems = [
     { name: "About", link: "#about" },
     { name: "Projects", link: "#projects" },
@@ -49,7 +50,7 @@ export const navItems = [
   
     {
       id: 5,
-      title: "Currently building a JS Animation library",
+      title: "Currently building an Issue tracker",
       description: "The Inside Scoop",
       className: "md:col-span-3 md:row-span-2",
       imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -195,7 +196,7 @@ export const navItems = [
     {
       id: 1,
       title: "Data Analysis Intern",
-      desc: "Analyzed and visualized data, created comprehensive reports, and utilized Power BI to support informed decision-making. Collaborated with stakeholders to identify key insights and trends, ensuring data-driven strategies that enhance operational efficiency.",
+      desc: "Analyzed and visualized data, created comprehensive reports, and utilized Power BI to support informed decision-making.",
       className: "md:col-span-2",
       thumbnail: "/exp1.svg",
     },
@@ -211,7 +212,7 @@ export const navItems = [
       title: "Freelance Web Dev Project",
       desc: "Led the dev of a foundation website for a client, from initial concept to deployment on the web.",
       className: "md:col-span-2", // change to md:col-span-2
-      thumbnail: "/exp3.svg",
+      thumbnail: "/exp2.svg",
     },
     // {
     //   id: 4,
@@ -226,13 +227,16 @@ export const navItems = [
     {
       id: 1,
       img: "/git.svg",
+      link: "https://github.com/devkobby24",
     },
     {
       id: 2,
       img: "/twit.svg",
+      link: "https://twitter.com/kay_dev24"
     },
     {
       id: 3,
       img: "/link.svg",
+      link: "https://www.linkedin.com/in/justice-duah-7ab6b4239"
     },
   ];
