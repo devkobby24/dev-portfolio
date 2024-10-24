@@ -26,11 +26,11 @@ const Hero = () => {
         {/* <ModeToggle /> */}
       </div>
       <div
-        className="h-screen w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
+        className="h-screen w-full bg-black-100 dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
        absolute top-0 left-0 flex items-center justify-center"
       >
         {/* Radial gradient for the container to give a faded look */}
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black-100 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
       </div>
 
       <div className="flex justify-center relative my-20 z-10">
@@ -39,9 +39,8 @@ const Hero = () => {
             Welcome
           </h2>
           <TextGenerateEffect
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
             words="Transforming Concepts Into Seamless User Experiences"
-            duration={0}
+            className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl font-sans">
             Hi, I&apos;m Justice, a frontend developer in Ghana
