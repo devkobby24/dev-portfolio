@@ -38,10 +38,13 @@ const Hero = () => {
           <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
             Welcome
           </h2>
-          <TextGenerateEffect
+          {/* <TextGenerateEffect
             words="Transforming Concepts Into Seamless User Experiences"
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
-          />
+          /> */}
+          <h2 className="text-center text-[40px] md:text-5xl lg:text-6xl">
+            Transforming Concepts Into Seamless User Experiences
+          </h2>
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl font-sans">
             Hi, I&apos;m Justice, a frontend developer in Ghana
           </p>
