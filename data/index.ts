@@ -14,7 +14,7 @@ export const navItems = [
       className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
       imgClassName: "w-full h-full",
       titleClassName: "justify-end",
-      img: "/b1.svg",
+      img: "/back1.png",
       spareImg: "",
     },
     {
@@ -44,7 +44,7 @@ export const navItems = [
       className: "lg:col-span-2 md:col-span-3 md:row-span-1",
       imgClassName: "",
       titleClassName: "justify-start",
-      img: "/grid.svg",
+      img: "",
       spareImg: "/b4.svg",
     },
   
@@ -56,7 +56,7 @@ export const navItems = [
       imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
       titleClassName: "justify-center md:justify-start lg:justify-center",
       img: "/b5.svg",
-      spareImg: "/grid.svg",
+      spareImg: "",
     },
     {
       id: 6,
@@ -84,7 +84,7 @@ export const navItems = [
       title: "Issue Tracker",
       des: "An issue tracker built with Next.js that allows users to create, manage, and track issues for projects.",
       img: "/issue-tracker.png",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/firebase.svg", "/c.svg"],
+      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/firebase.svg", "/c.svg" ,"/prisma.svg", "/sentry.svg"],
       link: "https://web-issue-tracker.vercel.app",
     },
     {
@@ -95,30 +95,30 @@ export const navItems = [
       iconLists: ["/re.svg", "/expo.svg", "/js.svg", "/firebase.svg", "/c.svg", "/google-maps.svg"],
       link: "https://github.com/devkobby24/mini-project",
     },
-    {
-      id: 4,
-      title: "FindDevJob",
-      des: "FindDevJob is a mobile application built with React Native and Expo that allows users to search for developer jobs across various industries and locations.",
-      img: "/jobsearch.png",
-      iconLists: ["/re.svg", "/css-icon.svg", "/js.svg", "/api.svg", "/expo.svg"],
-      link: "https://github.com/devkobby24/JobFinderApp",
-    },
-    {
-      id: 5,
-      title: "Password Generator",
-      des: "A simple webpage that generates random passwords using HTML, CSS, and JavaScript. Users can click the Generate button to create a random password instantly.",
-      img: "/passwordgen.png",
-      iconLists: ["/html-icon.svg", "/js.svg", "/css-icon.svg",],
-      link: "https://passphrasegenerator.netlify.app/",
-    },
-    {
-      id: 6,
-      title: "Non Profit Foundation Website",
-      des: "Welcome to the official website of Therestella Foundation, a nonprofit organization dedicated to empowering underprivileged communities through education and sustainable development initiatives.",
-      img: "/therestella.png",
-      iconLists: ["/html-icon.svg", "/js.svg", "/css-icon.svg", "/php.svg", "/scss.svg"],
-      link: "https://therestellafoundation.netlify.app",
-    }
+    // {
+    //   id: 4,
+    //   title: "FindDevJob",
+    //   des: "FindDevJob is a mobile application built with React Native and Expo that allows users to search for developer jobs across various industries and locations.",
+    //   img: "/jobsearch.png",
+    //   iconLists: ["/re.svg", "/css-icon.svg", "/js.svg", "/api.svg", "/expo.svg"],
+    //   link: "https://github.com/devkobby24/JobFinderApp",
+    // },
+    // {
+    //   id: 5,
+    //   title: "Password Generator",
+    //   des: "A simple webpage that generates random passwords using HTML, CSS, and JavaScript. Users can click the Generate button to create a random password instantly.",
+    //   img: "/passwordgen.png",
+    //   iconLists: ["/html-icon.svg", "/js.svg", "/css-icon.svg",],
+    //   link: "https://passphrasegenerator.netlify.app/",
+    // },
+    // {
+    //   id: 6,
+    //   title: "Non Profit Foundation Website",
+    //   des: "Welcome to the official website of Therestella Foundation, a nonprofit organization dedicated to empowering underprivileged communities through education and sustainable development initiatives.",
+    //   img: "/therestella.png",
+    //   iconLists: ["/html-icon.svg", "/js.svg", "/css-icon.svg", "/php.svg", "/scss.svg"],
+    //   link: "https://therestellafoundation.netlify.app",
+    // }
   ];
   
   export const testimonials = [
@@ -141,7 +141,7 @@ export const navItems = [
         "I've been consistently impressed by Justice' ability to manage complex tasks like issue tracking, Firestore integration, and authentication workflows in our app. They handle everything with a calm demeanor and always deliver high-quality code.",
       name: "Ignatus Forkuo",
       title: "Student at KNUST",
-      img: "/sammy.jpg",
+      img: "/igna.jpg",
     },
     {
       quote:
@@ -152,7 +152,7 @@ export const navItems = [
     },
     {
       quote:
-        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+        "Collaborating with Justice was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Justice's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Justice is the ideal partner.",
       name: "Godwin Opoku Duah",
       title: "C.T.O at Brolly",
       img: "/kobby.jpg",
