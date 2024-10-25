@@ -13,10 +13,9 @@
     "@radix-ui/react-slot": "^1.1.0",
     "@react-three/drei": "^9.114.6",
     "@react-three/fiber": "^8.17.10",
-    "@sentry/nextjs": "^8.35.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.11.9",
+    "framer-motion": "^11.0.25",
     "lucide-react": "^0.453.0",
     "mini-svg-data-uri": "^1.4.4",
     "next": "^14.2.15",
@@ -27,8 +26,8 @@
     "react-lottie": "^1.2.4",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",
-    "three": "^0.169.0",
-    "three-globe": "^2.33.0"
+    "three": "^0.163.0",
+    "three-globe": "^2.31.0"
   },
   "devDependencies": {
     "@types/node": "^20.16.14",
