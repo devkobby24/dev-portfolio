@@ -77,15 +77,15 @@ export const navItems = [
       des: "🌍 Your Ultimate Travel Companion, the smartest way to plan your dream vacations!",
       img: "/tripplanner.png",
       iconLists: ["/re.svg", "/tail.svg", "/js.svg", "/firebase.svg", "/c.svg", "/vite.svg"],
-      link: "https://web-ai-tripplanner.vercel.app",
+      link: "https://roamai.vercel.app",
     },
     {
       id: 2,
-      title: "Issue Tracker",
+      title: "TraceFlow",
       des: "An issue tracker built with Next.js that allows users to create, manage, and track issues for projects.",
       img: "/issue-tracker.png",
       iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/firebase.svg", "/c.svg" ,"/prisma.svg", "/sentry.svg"],
-      link: "https://web-issue-tracker.vercel.app",
+      link: "https://traceflow.vercel.app",
     },
     {
       id: 3,
@@ -145,10 +145,10 @@ export const navItems = [
     },
     {
       quote:
-        "Justice is a brilliant developer who helped us build an issue tracker dashboard with React and Prisma. Their understanding of databases and efficient query handling with MySQL was a great asset to our team.",
-      name: "Francis Adjei",
-      title: "Software Developer at Brolly",
-      img: "/sammy.jpg",
+        "Working with Justice is inspiring. He combines innovation with attention to detail, whether building AI-driven apps, dynamic UIs, or responsive mobile experiences. With impressive versatility across React, Next.js, and Tailwind CSS, he consistently focuses on user experience and best practices, from authentication to Firestore optimization. Justice's enthusiasm and commitment to quality drive him to push the boundaries of modern development.",
+      name: "ChatGPT",
+      title: "AI ChatBot",
+      img: "/GPT.png",
     },
     {
       quote:
