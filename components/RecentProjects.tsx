@@ -28,6 +28,7 @@ const RecentProjects = () => {
                   layout="fill"
                   objectFit="cover"
                   className="z-10 absolute bottom-0"
+                  loading="lazy"
                 />
               </div>
               <h1 className="font-bold text-base md:text-xl lg:text-2xl line-clamp-1">
@@ -51,6 +52,7 @@ const RecentProjects = () => {
                         width={32} 
                         height={32} 
                         className="p-2"
+                        loading="lazy"
                       />
                     </div>
                   ))}
