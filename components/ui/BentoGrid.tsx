@@ -91,8 +91,12 @@ export const BentoGridItem = ({
             <Image
               src={img}
               alt={img}
-              layout="fill" // Make the image cover its container
-              className={cn(imgClassName, "object-cover object-center")}
+              layout="fill"
+              width={0}
+              height={0}
+              className={cn(imgClassName, "object-cover w-auto h-auto")}
+              priority
+              loading="eager"
             />
           )}
         </div>
@@ -105,7 +109,8 @@ export const BentoGridItem = ({
             <Image
               src={spareImg}
               alt={spareImg}
-              layout="fill"
+              width={0}
+              height={0}
               className="object-cover object-center w-full h-full"
             />
           )}

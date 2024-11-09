@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 type SpotlightProps = {
@@ -7,10 +7,19 @@ type SpotlightProps = {
 };
 
 export const Spotlight = ({ className, fill }: SpotlightProps) => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Trigger animation after the component mounts
+  useEffect(() => {
+    setIsVisible(true); // Set to true after mount
+  }, []);
+
   return (
     <svg
       className={cn(
-        "animate-spotlight pointer-events-none absolute z-[1]  h-[169%] w-[138%] lg:w-[84%] opacity-0",
+        `pointer-events-none absolute z-[1] h-[169%] w-[138%] lg:w-[84%] opacity-0 ${
+          isVisible ? "animate-spotlight" : ""
+        }`,
         className
       )}
       xmlns="http://www.w3.org/2000/svg"

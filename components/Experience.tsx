@@ -42,4 +42,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default React.memo(Experience);

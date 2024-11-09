@@ -71,4 +71,4 @@ const RecentProjects = () => {
   );
 };
 
-export default RecentProjects;
+export default React.memo(RecentProjects);

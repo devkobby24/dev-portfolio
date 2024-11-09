@@ -14,7 +14,7 @@ export const TextGenerateEffect: React.FC<TextGenerateEffectProps> = ({
   words,
   className,
   filter = true,
-  duration = 0.5,
+  duration = 0.4, // Slightly reduced for smoother transition
 }) => {
   const [scope, animate] = useAnimate();
   const wordsArray = useMemo(() => words.split(" "), [words]);
@@ -29,27 +29,30 @@ export const TextGenerateEffect: React.FC<TextGenerateEffectProps> = ({
         },
         {
           duration: duration,
-          delay: stagger(0.15),
+          delay: stagger(0.1), // Reduced stagger time to speed up
         }
       );
     }
   }, [scope, animate, filter, duration]);
 
-  const renderWords = useCallback(() => (
-    <motion.div ref={scope}>
-      {wordsArray.map((word, idx) => (
-        <motion.span
-          key={word + idx}
-          className={`${idx > 3 ? 'text-purple' : "dark:text-white text-black"} opacity-0`}
-          style={{
-            filter: filter ? "blur(10px)" : "none",
-          }}
-        >
-          {word}{" "}
-        </motion.span>
-      ))}
-    </motion.div>
-  ), [wordsArray, filter]);
+  const renderWords = useCallback(
+    () => (
+      <motion.div ref={scope}>
+        {wordsArray.map((word, idx) => (
+          <motion.span
+            key={word + idx}
+            className={`${idx > 3 ? 'text-purple' : "dark:text-white text-black"} opacity-0`}
+            style={{
+              filter: filter ? "blur(5px)" : "none", // Reduced blur for smoother performance
+            }}
+          >
+            {word}{" "}
+          </motion.span>
+        ))}
+      </motion.div>
+    ),
+    [wordsArray, filter]
+  );
 
   return (
     <div className={cn("font-bold", className)}>

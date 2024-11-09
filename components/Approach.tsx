@@ -49,7 +49,7 @@ const Approach=()=> {
   );
 }
 
-export default Approach;
+export default React.memo(Approach);
 
 const Card = ({
   title,
