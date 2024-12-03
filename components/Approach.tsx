@@ -93,7 +93,7 @@ const Card = ({
         <h2 className="dark:text-white text-2xl mb-4 text-center opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200">
           {title}
         </h2>
-        <p className="text-white text-sm text-center opacity-0 group-hover/canvas-card:opacity-100 relative z-10 font-sans group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200" style={{ color: "#e4ecff" }}>{description}</p>
+        <p className="text-white text-sm text-center opacity-0 group-hover/canvas-card:opacity-100 relative z-10 group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200" style={{ color: "#e4ecff" }}>{description}</p>
       </div>
     </div>
   );
