@@ -91,10 +91,9 @@ export const BentoGridItem = ({
             <Image
               src={img}
               alt={img}
-              layout="fill"
-              width={0}
-              height={0}
-              className={cn(imgClassName, "object-cover w-auto h-auto")}
+              width={800}
+              height={400}
+              className={cn(imgClassName, "object-cover w-full h-full")}
               priority
               loading="eager"
             />
@@ -128,9 +127,7 @@ export const BentoGridItem = ({
           <div className="font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
             {description}
           </div>
-          <div
-            className={`text-lg lg:text-3xl max-w-96 font-bold z-10`}
-          >
+          <div className={`text-lg lg:text-3xl max-w-96 font-bold z-10`}>
             {title}
           </div>
 

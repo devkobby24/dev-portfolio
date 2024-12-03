@@ -25,8 +25,8 @@ const RecentProjects = () => {
                 <Image 
                   src={img} 
                   alt={title} 
-                  layout="fill"
-                  objectFit="cover"
+                  width={570}
+                  height={570}
                   className="z-10 absolute bottom-0"
                   loading="lazy"
                 />

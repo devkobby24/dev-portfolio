@@ -4,26 +4,28 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "./ui/CanvasRevealEffect";
 
-const Approach=()=> {
+const Approach = () => {
   return (
     <section id="approach" className="w-full py-20">
-        <h1 className="heading">
-            My <span className="text-purple"> approach</span>
-        </h1>
+      <h1 className="heading">
+        My <span className="text-purple"> approach</span>
+      </h1>
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4 mx-auto px-8 ">
-        <Card 
-        title="Planning & Strategy" 
-        description="I focus on aligning resources and efforts across the organization to create a roadmap for sustainable growth and adaptability to changes in the environment."
-        icon={<AceternityIcon order="Phase 1"/>}>
+        <Card
+          title="Planning & Strategy"
+          description="I focus on aligning resources and efforts across the organization to create a roadmap for sustainable growth and adaptability to changes in the environment."
+          icon={<AceternityIcon order="Phase 1" />}
+        >
           <CanvasRevealEffect
             animationSpeed={5.1}
             containerClassName="bg-emerald-900"
           />
         </Card>
-        <Card 
-        title="Development & Testing" 
-        description="Coding, debugging, and conducting various tests to identify and fix issues before final deployment, ensuring that the end product meets user requirements and industry standards."
-        icon={<AceternityIcon order="Phase 2"/>}>
+        <Card
+          title="Development & Testing"
+          description="Coding, debugging, and conducting various tests to identify and fix issues before final deployment, ensuring that the end product meets user requirements and industry standards."
+          icon={<AceternityIcon order="Phase 2" />}
+        >
           <CanvasRevealEffect
             animationSpeed={3}
             containerClassName="bg-black"
@@ -34,10 +36,11 @@ const Approach=()=> {
             dotSize={2}
           />
         </Card>
-        <Card 
-        title="Evaluation & Deployment"
-        description="Final testing, user feedback collection, and the implementation of the product in the target environment, ensuring a smooth transition and optimal performance." 
-        icon={<AceternityIcon order="Phase 3"/>}>
+        <Card
+          title="Evaluation & Deployment"
+          description="Final testing, user feedback collection, and the implementation of the product in the target environment, ensuring a smooth transition and optimal performance."
+          icon={<AceternityIcon order="Phase 3" />}
+        >
           <CanvasRevealEffect
             animationSpeed={3}
             containerClassName="bg-sky-600"
@@ -47,7 +50,7 @@ const Approach=()=> {
       </div>
     </section>
   );
-}
+};
 
 export default React.memo(Approach);
 
@@ -93,7 +96,12 @@ const Card = ({
         <h2 className="dark:text-white text-2xl mb-4 text-center opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200">
           {title}
         </h2>
-        <p className="text-white text-sm text-center opacity-0 group-hover/canvas-card:opacity-100 relative z-10 group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200" style={{ color: "#e4ecff" }}>{description}</p>
+        <p
+          className="text-white text-sm text-center opacity-0 group-hover/canvas-card:opacity-100 relative z-10 group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200"
+          style={{ color: "#e4ecff" }}
+        >
+          {description}
+        </p>
       </div>
     </div>
   );
@@ -102,9 +110,9 @@ const Card = ({
 const AceternityIcon = ({ order }: { order?: string }) => {
   return (
     <div className="flex items-center justify-center">
-        <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-full border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-            {order}
-        </button>
+      <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-full border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+        {order}
+      </button>
     </div>
   );
 };
