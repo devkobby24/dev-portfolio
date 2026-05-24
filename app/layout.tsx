@@ -17,9 +17,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={outfit.className}>
-      <body className="antialiased">
-        <ThemeProvider attribute="class" defaultTheme="dark">
+    <html lang="en" className={outfit.className} suppressHydrationWarning>
+      <body className="antialiased bg-background text-foreground">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+        >
           {children}
           <Analytics />
         </ThemeProvider>

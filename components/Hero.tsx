@@ -25,17 +25,17 @@ const Hero = () => {
           fill="white"
         />
       </div> */}
-      <div className="h-screen w-full bg-black-100 dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2] absolute top-0 left-0 flex items-center justify-center">
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black-100 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+      <div className="h-screen w-full bg-background dark:bg-grid-white/[0.03] bg-grid-black-100/[0.05] absolute top-0 left-0 flex items-center justify-center">
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
       </div>
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Welcome
+          <h2 className="uppercase tracking-widest text-xs text-center text-muted-foreground max-w-80">
+            Duah Justice Abban — Full-Stack Developer
           </h2>
           <h1 className="text-4xl md:text-5xl font-bold text-center my-10">
-            <span className="text-white">Transforming Concepts Into {" "}
-            <span className="text-purple">Seamless Experiences</span></span>
+            <span className="text-foreground">Transforming Concepts Into {" "}
+            <span className="text-violet-600 dark:text-purple">Seamless Experiences</span></span>
           </h1>
 
           {/* Render MagicButton immediately */}
