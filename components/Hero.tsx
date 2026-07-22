@@ -1,56 +1,54 @@
-import React, { memo, useEffect, useState } from "react";
-import dynamic from "next/dynamic";
-import { Spotlight } from "./ui/Spotlight";
-import { FaLocationArrow } from "react-icons/fa";
-import Link from "next/link";
-import MagicButton from "./ui/MagicButton";
+import { profile, socials } from "@/data";
+import Reveal from "./ui/Reveal";
 
 const Hero = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  // Trigger spotlight animation after mount
-  useEffect(() => {
-    setIsVisible(true); // This triggers the spotlight animation
-  }, []);
-
   return (
-    <div className="pb-5 pt-36">
-      {/* <div>
-        <Spotlight
-          className={`-top-40 -left-10 md:-left-32 md:-top-20 h-screen ${isVisible ? "animate-spotlight" : ""}`}
-          fill="white"
-        />
-        <Spotlight
-          className={`top-40 -right-10 md:-right-32 md:-top-20 h-screen ${isVisible ? "animate-spotlight" : ""}`}
-          fill="white"
-        />
-      </div> */}
-      <div className="h-screen w-full bg-background dark:bg-grid-white/[0.03] bg-grid-black-100/[0.05] absolute top-0 left-0 flex items-center justify-center">
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
-      </div>
-      <div className="flex justify-center relative my-20 z-10">
-        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <h2 className="uppercase tracking-widest text-xs text-center text-muted-foreground max-w-80">
-            Duah Justice Abban — Full-Stack Developer
-          </h2>
-          <h1 className="text-4xl md:text-5xl font-bold text-center my-10">
-            <span className="text-foreground">Transforming Concepts Into {" "}
-            <span className="text-violet-600 dark:text-purple">Seamless Experiences</span></span>
-          </h1>
+    <section id="top" className="content-column pb-8 pt-20 md:pb-16 md:pt-32">
+      <Reveal>
+        <p className="section-label">{profile.role}</p>
+      </Reveal>
 
-          {/* Render MagicButton immediately */}
-          <Link href="#about">
-            <MagicButton
-              title="Show My Work"
-              icon={<FaLocationArrow />}
-              position="right"
-              otherClasses="gap-2"
-            />
-          </Link>
+      <Reveal delay={0.08}>
+        <h1 className="mt-6 text-4xl font-medium tracking-tight text-foreground md:text-5xl">
+          {profile.name}
+        </h1>
+      </Reveal>
+
+      <Reveal delay={0.16}>
+        <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
+          {profile.intro}
+        </p>
+      </Reveal>
+
+      <Reveal delay={0.24}>
+        <p className="mt-8 font-mono text-xs text-muted-foreground">
+          {profile.location}
+        </p>
+      </Reveal>
+
+      <Reveal delay={0.32}>
+        <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-xs">
+          <a
+            href={`mailto:${profile.email}`}
+            className="link-underline inline-block py-1.5"
+          >
+            Email
+          </a>
+          {socials.map((social) => (
+            <a
+              key={social.label}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link-underline inline-block py-1.5"
+            >
+              {social.label}
+            </a>
+          ))}
         </div>
-      </div>
-    </div>
+      </Reveal>
+    </section>
   );
 };
 
-export default memo(Hero);
+export default Hero;

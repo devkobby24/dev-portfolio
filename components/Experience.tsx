@@ -1,45 +1,38 @@
-import { workExperience } from "@/data";
-import React from "react";
-import { Button } from "./ui/MovingBorder";
-import Image from "next/image";
+import { experience } from "@/data";
+import Section from "./ui/Section";
+import Reveal from "./ui/Reveal";
 
 const Experience = () => {
   return (
-    <div className="py-20" id="experience">
-      <h1 className="heading">
-        My
-        <span className="text-violet-600 dark:text-purple"> work experience</span>
-      </h1>
-      <div className="w-full mt-12 grid grid-cols gap-5">
-        {workExperience.map((card) => (
-          <Button
-            borderRadius="1.75rem"
-            className="flex-1 bg-card text-card-foreground border-border"
-            duration={Math.floor(Math.random() * 10000) + 10000}
-            key={card.id}
-          >
-            <div className="flex lg:flex-row lg:items-center flex-col p-3 py-6 md:p-5 lg:p-10 gap-2">
-              <Image
-                src={card.thumbnail}
-                alt={card.title}
-                width={128}
-                height={128}
-                className="w-16 object-cover"
-              />
-              <div className="lg:ms-5">
-                <h1 className="text-start text-sm md:text-xl font-bold">
-                  {card.title}
-                </h1>
-                <p className="text-start text-muted-foreground mt-3 font-medium">
-                  {card.desc}
+    <Section id="experience" index="03" title="Experience">
+      <ul className="-mt-2">
+        {experience.map((entry, entryIndex) => (
+          <li key={`${entry.company}-${entry.role}`}>
+            <Reveal delay={entryIndex * 0.06}>
+              <div className="border-b border-border py-7">
+                <div className="flex items-baseline justify-between gap-4">
+                  <h3 className="text-base font-medium tracking-tight text-foreground">
+                    {entry.role}
+                  </h3>
+                  <span className="shrink-0 font-mono text-xs text-muted-foreground">
+                    {entry.period}
+                  </span>
+                </div>
+
+                <p className="mt-1 font-mono text-xs text-muted-foreground">
+                  {entry.company}
+                </p>
+
+                <p className="mt-3 max-w-lg text-sm leading-relaxed text-muted-foreground">
+                  {entry.description}
                 </p>
               </div>
-            </div>
-          </Button>
+            </Reveal>
+          </li>
         ))}
-      </div>
-    </div>
+      </ul>
+    </Section>
   );
 };
 
-export default React.memo(Experience);
+export default Experience;

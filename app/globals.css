@@ -6,86 +6,151 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    --background: 40 20% 98%;
+    --foreground: 24 10% 10%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card: 40 20% 98%;
+    --card-foreground: 24 10% 10%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover: 40 20% 98%;
+    --popover-foreground: 24 10% 10%;
 
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 24 10% 10%;
+    --primary-foreground: 40 20% 98%;
 
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
+    --secondary: 40 12% 94%;
+    --secondary-foreground: 24 10% 10%;
 
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
+    --muted: 40 12% 94%;
+    --muted-foreground: 30 5% 42%;
 
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --accent: 40 12% 94%;
+    --accent-foreground: 24 10% 10%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 40 20% 98%;
 
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 10% 3.9%;
+    --border: 34 10% 88%;
+    --input: 34 10% 88%;
+    --ring: 24 10% 10%;
 
-    --radius: 0.5rem;
+    /* The single accent, used only for links and hover states. */
+    --accent-link: 262 52% 48%;
+
+    --radius: 0.375rem;
   }
 
   .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    --background: 24 8% 7%;
+    --foreground: 40 15% 94%;
 
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card: 24 8% 7%;
+    --card-foreground: 40 15% 94%;
 
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 24 8% 7%;
+    --popover-foreground: 40 15% 94%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
+    --primary: 40 15% 94%;
+    --primary-foreground: 24 8% 7%;
 
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 24 6% 14%;
+    --secondary-foreground: 40 15% 94%;
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 24 6% 14%;
+    --muted-foreground: 35 6% 58%;
 
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 24 6% 14%;
+    --accent-foreground: 40 15% 94%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 40 15% 94%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --border: 24 6% 17%;
+    --input: 24 6% 17%;
+    --ring: 35 8% 70%;
+
+    --accent-link: 262 60% 74%;
   }
 }
 
 @layer base {
   * {
-    @apply border-border !scroll-smooth;
+    @apply border-border;
   }
+
+  html {
+    @apply scroll-smooth;
+    /* Anchored sections shouldn't hide beneath the sticky nav. */
+    scroll-padding-top: 6rem;
+  }
+
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "kern", "liga";
+    text-rendering: optimizeLegibility;
   }
-  button {
-    @apply active:outline-none;
+
+  ::selection {
+    background-color: hsl(var(--accent-link) / 0.22);
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--accent-link));
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  /* The reading column every section shares. */
+  .content-column {
+    @apply mx-auto w-full max-w-2xl px-6;
+  }
+
+  /* Mono numbered section label, e.g. "01 / about". */
+  .section-label {
+    @apply font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground;
+  }
+
+  .link-underline {
+    @apply underline decoration-border underline-offset-4 transition-colors;
+  }
+
+  .link-underline:hover {
+    color: hsl(var(--accent-link));
+    text-decoration-color: hsl(var(--accent-link));
   }
 }
 
 @layer utilities {
-  .heading {
-    @apply font-bold text-4xl md:text-5xl text-center;
+  /* Horizontal scrollers where a visible bar would add more noise than affordance. */
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
 
-  .black-gradient {
-    background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Initial state for scroll reveals; Reveal.tsx flips this on intersection. */
+  .reveal {
+    opacity: 0;
+    transform: translateY(0.75rem);
+    transition:
+      opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .reveal-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
   }
 }
