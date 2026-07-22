@@ -1,14 +1,27 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/app/theme-provider";
 import { Analytics } from "@vercel/analytics/react";
+import { profile } from "@/data";
 
-const outfit = Outfit({ subsets: ["latin"] });
+const geistSans = localFont({
+  src: "./fonts/GeistVF.woff",
+  variable: "--font-sans",
+  weight: "100 900",
+  display: "swap",
+});
+
+const geistMono = localFont({
+  src: "./fonts/GeistMonoVF.woff",
+  variable: "--font-mono",
+  weight: "100 900",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: "Justice' Portfolio",
-  description: "Modern & Minimalistic Portfolio",
+  title: `${profile.name} — ${profile.role}`,
+  description: profile.intro,
 };
 
 export default function RootLayout({
@@ -17,8 +30,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={outfit.className} suppressHydrationWarning>
-      <body className="antialiased bg-background text-foreground">
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable}`}
+      suppressHydrationWarning
+    >
+      <body className="bg-background font-sans text-foreground antialiased">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
