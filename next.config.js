@@ -3,6 +3,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
+    // Site Star publishes the static files in out/; it runs no Node server.
+    output: "export",
+    // Static hosting has no image optimizer.
+    images: { unoptimized: true },
   };
   
   module.exports = nextConfig;
