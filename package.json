@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@sentry/nextjs": "^10.53.1",
+    "@sitestar/sdk": "^0.1.1",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
     "clsx": "^2.1.1",
