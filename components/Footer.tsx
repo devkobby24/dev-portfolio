@@ -1,4 +1,5 @@
 import { profile } from "@/data";
+import SiteName from "./SiteName";
 
 const Footer = () => {
   return (
@@ -7,6 +8,7 @@ const Footer = () => {
         <p>
           &copy; {new Date().getFullYear()} {profile.fullName}
         </p>
+        <SiteName />
         <a href="#top" className="inline-block py-1.5 transition-colors hover:text-foreground">
           Back to top
         </a>
