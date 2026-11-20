@@ -4,6 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/app/theme-provider";
 import { Analytics } from "@vercel/analytics/react";
 import { profile } from "@/data";
+import SiteStarProvider from "@/components/SiteStarProvider";
+import Chat from "@/components/Chat";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -41,7 +43,10 @@ export default function RootLayout({
           defaultTheme="dark"
           enableSystem={false}
         >
-          {children}
+          <SiteStarProvider>
+            {children}
+            <Chat />
+          </SiteStarProvider>
           <Analytics />
         </ThemeProvider>
       </body>
