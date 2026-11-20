@@ -1,6 +1,7 @@
 import { profile, socials } from "@/data";
 import Section from "./ui/Section";
 import Reveal from "./ui/Reveal";
+import ContactForm from "./ContactForm";
 
 const Contact = () => {
   return (
@@ -24,6 +25,15 @@ const Contact = () => {
       </Reveal>
 
       <Reveal delay={0.16}>
+        <div className="mt-12 border-t border-border pt-8">
+          <p className="mb-6 font-mono text-xs text-muted-foreground">
+            Or leave a message here.
+          </p>
+          <ContactForm />
+        </div>
+      </Reveal>
+
+      <Reveal delay={0.24}>
         <ul className="mt-12 space-y-3 border-t border-border pt-8">
           {socials.map((social) => (
             <li key={social.label}>
